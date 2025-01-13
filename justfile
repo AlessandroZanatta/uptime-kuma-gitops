@@ -1,3 +1,3 @@
 
 run:
-  AUTH__PASSWORD=testtest0 CONFIG_PATH=./test/config.yaml uv run src/main.py
+  AUTH__PASSWORD=testtest0 CONFIG_PATH=./examples/config.yaml uv run src/main.py
