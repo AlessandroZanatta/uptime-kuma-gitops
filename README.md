@@ -10,3 +10,5 @@ This is a simple Python script that interacts with your Uptime Kuma instance. Th
 
 Please refer to `examples/config.yaml` for an example configuration.
 To add options to the monitors, notifications or status pages, please check out the related WebSocket call or open an issue/PR to expand the examples.
+
+To run the script, use your system Python, or use [`uv`](https://docs.astral.sh/uv). With `uv`, simply run: `AUTH__PASSWORD=<your admin pwd> CONFIG_PATH=<path/to/config.yaml> uv run src/main.py` to setup your Uptime Kuma instance!
