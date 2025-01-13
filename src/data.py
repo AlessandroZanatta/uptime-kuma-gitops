@@ -75,5 +75,4 @@ def get_lists(sio: socketio.SimpleClient):
                 data.status_pages = [
                     UptimeStatusPage.model_validate(sp) for sp in msg[1].values()
                 ]
-    print(data)
     return data
