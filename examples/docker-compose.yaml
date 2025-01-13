@@ -1,0 +1,15 @@
+---
+services:
+  uptime-kuma:
+    image: "louislam/uptime-kuma:beta"
+    ports:
+      - "3001:3001"
+    environment:
+      UPTIME_KUMA_WS_ORIGIN_CHECK: bypass
+  db:
+    image: "mariadb:latest"
+    environment:
+      MARIADB_RANDOM_ROOT_PASSWORD: 1
+      MARIADB_USER: kuma
+      MARIADB_PASSWORD: kuma
+      MARIADB_DATABASE: kuma

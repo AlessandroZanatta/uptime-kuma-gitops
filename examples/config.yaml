@@ -1,0 +1,36 @@
+---
+server:
+  url: "http://localhost:3001"
+
+setup:
+  type: mariadb
+  hostname: db
+  username: kuma
+  password: kuma
+  dbName: kuma
+
+auth:
+  username: root
+
+notifications:
+  - name: kalexlab
+    type: telegram
+    telegramBotToken: "1234"
+    telegramChatID: "1234"
+
+monitors:
+  - type: http
+    name: test
+    url: "https://google.com"
+    interval: 60
+    notifications:
+      - kalexlab
+
+status_pages:
+  - title: test
+    slug: test-slug
+    description: test description
+    groups:
+      - name: "group 1"
+        monitors:
+          - test
