@@ -14,7 +14,7 @@ def sync_monitors(
     for monitor in config.monitors:
         m = next((x for x in monitors if x.name == monitor.name), None)
 
-        log.info("Setting up monitor %s", monitor.name)
+        log.info("Syncing monitor: '%s'", monitor.name)
 
         notifiers = [
             n for n in notifications if any(n.name == x for x in monitor.notifications)
@@ -27,5 +27,6 @@ def sync_monitors(
         monitor_data["proxyId"] = None  # Currently not supported
         r = sio.call("editMonitor" if m is not None else "add", data=monitor_data)
         if not r["ok"]:
-            log.error("Error while syncing monitor %s: %s", monitor.name, r["msg"])
+            log.error("Error while syncing monitor '%s': %s", monitor.name, r["msg"])
             continue
+        log.info("Monitor synced successfully: '%s'", monitor.name)

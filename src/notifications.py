@@ -11,16 +11,16 @@ def sync_notifications(
 
     for notification in config.notifications:
         n = next((x for x in notifications if x.name == notification.name), None)
-        log.info("Syncing notification: %s", notification.name)
+        log.info("Syncing notification: '%s'", notification.name)
         r = sio.call(
             "addNotification",
             data=(notification.model_dump(), n.id if n is not None else None),
         )
         if not r["ok"]:
             log.error(
-                "Error while syncing notification %s: %s", notification.name, r["msg"]
+                "Error while syncing notification '%s': %s", notification.name, r["msg"]
             )
-        log.info("Notification synced correctly: %s", notification.name)
+        log.info("Notification synced correctly: '%s'", notification.name)
 
 
 # ["addNotification",{"name":"kalexlab","type":"telegram","isDefault":false,"applyExisting":false,"telegramBotToken":"1234","telegramChatID":"2345"}]
