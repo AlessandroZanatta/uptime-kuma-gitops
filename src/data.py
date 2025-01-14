@@ -1,6 +1,7 @@
 from typing import Any
-from pydantic import BaseModel, ConfigDict, TypeAdapter
+
 import socketio
+from pydantic import BaseModel, ConfigDict, TypeAdapter
 
 
 class MonitorList(BaseModel):

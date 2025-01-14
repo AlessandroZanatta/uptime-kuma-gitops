@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
 from config import get_config
+from data import get_lists
 from logger import log
-from setup import is_setup_needed, setup
+from monitors import sync_monitors
 from notifications import sync_notifications
+from setup import is_setup_needed, setup
 from status_page import sync_status_pages
 from util import get_logged_socket
-from data import get_lists
-from monitors import sync_monitors
 
 
 def main():

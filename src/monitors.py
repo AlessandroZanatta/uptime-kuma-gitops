@@ -1,6 +1,7 @@
 import socketio
-from data import UptimeMonitor, UptimeNotification
+
 from config import get_config
+from data import UptimeMonitor, UptimeNotification
 from logger import log
 
 
