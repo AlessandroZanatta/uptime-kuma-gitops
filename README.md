@@ -2,9 +2,9 @@
 
 This is a simple Python script that interacts with your Uptime Kuma instance. The goal is being able to have a YAML description of the Uptime Kuma configuration, thus enabling GitOps. Currently, it is not possible to control all the features of Uptime Kuma (such as proxies, maintenance periods, and so on). Only initial setup, notifications, monitors and status pages are supported.
 
-**NOTE**: this was built with compatibility with Uptime Kuma v2 in mind. In particular, it has been tested solely with the `beta` tag.
+**NOTE**: this was built with compatibility with Uptime Kuma v2 in mind. In particular, it has been tested solely with the `beta` tag (and not extensively).
 
-**Note**: while running this should be safe and non destructive, run it carefully in production environments!
+**Note**: while running this should be safe and non-destructive, run it carefully in production environments!
 
 ## Usage
 

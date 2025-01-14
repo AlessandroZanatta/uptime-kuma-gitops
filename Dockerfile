@@ -1,4 +1,5 @@
 FROM ghcr.io/astral-sh/uv:python3.13-alpine
+LABEL org.opencontainers.image.source="https://github.com/AlessandroZanatta/uptime-kuma-gitops"
 
 WORKDIR /app
 
