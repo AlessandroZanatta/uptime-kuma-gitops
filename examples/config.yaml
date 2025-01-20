@@ -11,6 +11,7 @@ setup:
 
 auth:
   username: root
+  password: testtest0
 
 notifications:
   - name: kalexlab
@@ -20,11 +21,17 @@ notifications:
 
 monitors:
   - type: http
-    name: test
+    name: http test
     url: "https://google.com"
     interval: 60
+    authMethod: basic
+    basic_auth_user: test
+    basic_auth_pass: test
     notifications:
       - kalexlab
+  - type: ping
+    name: ping test
+    hostname: www.google.com
 
 status_pages:
   - title: test

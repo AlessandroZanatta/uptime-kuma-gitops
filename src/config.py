@@ -50,7 +50,7 @@ class Monitor(BaseSettings):
     type: str
     name: str
     parent: str | None = None
-    url: str
+    url: str = "https://"
     method: str = "GET"
     interval: int = 60
     resendInterval: int = 0
@@ -99,7 +99,7 @@ class Group(BaseSettings):
 class StatusPage(BaseSettings):
     title: str
     slug: str
-    description: str
+    description: str = ""
     groups: list[Group]
 
 

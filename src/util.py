@@ -30,8 +30,7 @@ def get_logged_socket():
     sio.call(
         "login",
         data={
-            "username": config.auth.username,
-            "password": config.auth.password,
+            **config.auth.model_dump(),
             "token": False,
         },
     )
